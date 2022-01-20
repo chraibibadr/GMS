@@ -82,7 +82,7 @@ public class UserController extends HttpServlet {
 				else
 					response.getWriter().write(json.toJson("false"));
 			}
-			else if (request.getParameter("op").equals("generate")) {
+			else if (request.getParameter("op").equals("gen")) {
 				response.setContentType("application/json");
 				User u = new User("", request.getParameter("user"), request.getParameter("pass"),
 						request.getParameter("role"), 0);
