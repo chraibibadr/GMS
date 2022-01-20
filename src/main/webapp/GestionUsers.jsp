@@ -181,7 +181,8 @@ function makeAccount(length)
 		var pass = generate(length);
 		$.ajax({
 			url: "UserController",
-			data: { user: user,
+			data: { op:generate,
+					user: user,
 					pass: pass,
 					role: role
 			},

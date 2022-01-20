@@ -82,6 +82,14 @@ public class UserController extends HttpServlet {
 				else
 					response.getWriter().write(json.toJson("false"));
 			}
+			else if (request.getParameter("op").equals("generate")) {
+				response.setContentType("application/json");
+				User u = new User("", request.getParameter("user"), request.getParameter("pass"),
+						request.getParameter("role"), 0);
+				us.createAccount(u);
+				loadAccounts(request, response);
+				System.out.println("loadAccounts");
+			}
 		} else if (request.getParameter("name") == null) {
 			User user = us.login(request.getParameter("user"), request.getParameter("pass"));
 			if (user != null) {
@@ -117,13 +125,6 @@ public class UserController extends HttpServlet {
 					(String) request.getSession(false).getAttribute("role"), 1);
 			if (us.register(user))
 				response.sendRedirect("login.jsp");
-		} else {
-			response.setContentType("application/json");
-			User u = new User("", request.getParameter("user"), request.getParameter("pass"),
-					request.getParameter("role"), 0);
-			us.createAccount(u);
-			loadAccounts(request, response);
-			System.out.println("loadAccounts");
 		}
 	}
 
