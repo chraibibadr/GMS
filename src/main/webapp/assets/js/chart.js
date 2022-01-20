@@ -17,7 +17,7 @@ $(function() {
   var chartData = {
     labels: xValues,
     datasets: [{
-      label: 'Nombre des salles',
+      label: 'Nombre des machines',
       data: yValues,
       backgroundColor: 'rgba(255, 100, 132, 0.2)',
       borderColor: 'rgba(255,100,132,1)',
