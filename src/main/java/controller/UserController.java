@@ -37,6 +37,14 @@ public class UserController extends HttpServlet {
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
 		if (request.getParameter("op") != null) {
+			if (request.getParameter("op").equals("genAccount")) {
+				response.setContentType("application/json");
+				User u = new User("", request.getParameter("user"), request.getParameter("pass"),
+						request.getParameter("role"), 0);
+				us.createAccount(u);
+				loadAccounts(request, response);
+				System.out.println("loadAccounts");
+			}
 			if (request.getParameter("op").equals("loadAccounts")) {
 				response.setContentType("application/json");
 				loadAccounts(request, response);
@@ -81,14 +89,6 @@ public class UserController extends HttpServlet {
 				}
 				else
 					response.getWriter().write(json.toJson("false"));
-			}
-			else if (request.getParameter("op").equals("generate")) {
-				response.setContentType("application/json");
-				User u = new User("", request.getParameter("user"), request.getParameter("pass"),
-						request.getParameter("role"), 0);
-				us.createAccount(u);
-				loadAccounts(request, response);
-				System.out.println("loadAccounts");
 			}
 		} else if (request.getParameter("name") == null) {
 			User user = us.login(request.getParameter("user"), request.getParameter("pass"));
