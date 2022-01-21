@@ -49,7 +49,8 @@ $(function() {
         radius: 0
       }
     }
-  };
+  };  
+  console.log(chartData);
  
  $(window).on('load', function() {
 	    var barChartCanvas = $("#barChart").get(0).getContext("2d");

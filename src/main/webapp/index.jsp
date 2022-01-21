@@ -179,6 +179,7 @@ $(window).on('load', function() {
 		$("body").removeClass("sidebar-icon-only");
     }, 500);
 });
+
 $(".deconnecter").on('click', function(event){
 	$.ajax({
 		url: "UserController",
