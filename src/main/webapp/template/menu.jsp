@@ -3,7 +3,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
 	<div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
 		<a class="sidebar-brand brand-logo" href="index.jsp">
-			<h1 class="text-white text-center" style="font-size: 34px;font-weight: 300;letter-spacing: 21px;">BADER</h1>
+			<h1 class="text-center text-white" style="font-size: 35px;font-weight: 400;letter-spacing: 12px;text-decoration: none;padding-top: 5px;">CHRAIBI</h1>
 		</a>
 		<a class="sidebar-brand brand-logo-mini" href="index.jsp">
 			<img src="assets/images/logo-mini.svg" alt="logo">
