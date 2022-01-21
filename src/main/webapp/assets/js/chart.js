@@ -52,7 +52,7 @@ $(function() {
   };  
   console.log(chartData);
  
- $( window ).load(function() {
+ $(window).on('load', function(){
   var barChartCanvas = $("#barChart").get(0).getContext("2d");
 	    var barChart = new Chart(barChartCanvas, {
 	      type: 'bar',
