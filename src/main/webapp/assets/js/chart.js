@@ -52,12 +52,12 @@ $(function() {
   };  
   console.log(chartData);
  
- $(window).on('load', function() {
-	    var barChartCanvas = $("#barChart").get(0).getContext("2d");
+ $( window ).load(function() {
+  var barChartCanvas = $("#barChart").get(0).getContext("2d");
 	    var barChart = new Chart(barChartCanvas, {
 	      type: 'bar',
 	      data: chartData,
 	      options: options
 	    });
-	});  
+	});
 });
