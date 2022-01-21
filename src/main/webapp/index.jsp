@@ -173,12 +173,12 @@
   </div>
 </div>
 <script>
-/*$(window).on('load', function() {
+$(window).on('load', function() {
 	$("#toggleNav").click();
 	setTimeout(function() { 
 		$("body").removeClass("sidebar-icon-only");
     }, 500);
-});*/
+});
 $(".deconnecter").on('click', function(event){
 	$.ajax({
 		url: "UserController",
